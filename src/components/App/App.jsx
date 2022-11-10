@@ -18,10 +18,16 @@ const business = {
 const businesses = [business, business];
 
 function App() {
+
+  const searchYelp = (term, location, sortBy) => {
+    console.log(`Searching Yelp with ${term}, ${location}, ${sortBy}`);
+  }
+
   return (
     <div className="App">
       <h1>ravenous</h1>
-      <SearchBar />
+      <SearchBar searchYelp={searchYelp} /> 
+      {/* API call is needed here */}
       <BusinessList businesses={businesses} />
     </div>
   );
