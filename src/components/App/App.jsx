@@ -10,7 +10,7 @@ const business = {
   city: 'Flavortown',
   state: 'NY',
   zipCode: '10101',
-  category: 'Italian',
+  category: 'Italian/Pizza',
   rating: 4.5,
   reviewCount: 90
 };
