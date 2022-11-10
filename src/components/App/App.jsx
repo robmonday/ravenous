@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { setState } from 'react';
 import './App.css';
 import BusinessList from '../BusinessList/BusinessList';
 import SearchBar from '../SearchBar/SearchBar';
+import Yelp from '../../util/Yelp';
 
+/* THIS HARDCODED OBJECT & ARRAY ARE NOT NEEDED NOW THAT WE ARE USING YELP API INSTEAD
 const business = {
   imageSrc: 'https://content.codecademy.com/programs/react/ravenous/pizza.jpg',
   name: 'MarginOtto Pizzeria',
@@ -16,8 +18,11 @@ const business = {
 };
 
 const businesses = [business, business];
+*/
 
 function App() {
+
+  [businesses, setBusinesses] = setState();  // setState used because function component
 
   const searchYelp = (term, location, sortBy) => {
     console.log(`Searching Yelp with ${term}, ${location}, ${sortBy}`);
