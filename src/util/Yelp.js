@@ -1,4 +1,4 @@
-const apiKey = "I9aVAho3nTMKu2DBUxTBTxpN3P2MP45fMtm6jYUbYg3J7-5uHjtU2WHo59972uQp-vSn8P3L2MoYA0ADBUG5WW36u3krutIlI44HxvE_9Q5Qem2GN7jj2YTSDnVtY3Yx;
+const apiKey = "I9aVAho3nTMKu2DBUxTBTxpN3P2MP45fMtm6jYUbYg3J7-5uHjtU2WHo59972uQp-vSn8P3L2MoYA0ADBUG5WW36u3krutIlI44HxvE_9Q5Qem2GN7jj2YTSDnVtY3Yx";
 
 const Yelp = {
 	search(term, location, sortBy) {
@@ -10,7 +10,7 @@ const Yelp = {
 			).then(
 				jsonResponse => {
 					if (jsonResponse.businesses) {
-						return return jsonResponse.businesses.map(
+						return jsonResponse.businesses.map(
 							business => {
 								return {
 									id: business.id, 
@@ -27,7 +27,7 @@ const Yelp = {
 							}
 						);
 					}
-				};
+				}
 			);
 	} 
 };

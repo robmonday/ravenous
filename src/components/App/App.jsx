@@ -1,4 +1,4 @@
-import React, { setState } from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import BusinessList from '../BusinessList/BusinessList';
 import SearchBar from '../SearchBar/SearchBar';
@@ -22,7 +22,7 @@ const businesses = [business, business];
 
 function App() {
 
-  [businesses, setBusinesses] = setState();  // setState used because function component
+  const [businesses, setBusinesses] = useState([]);  // setState used because function component
 
   const searchYelp = (term, location, sortBy) => {
     console.log(`Searching Yelp with ${term}, ${location}, ${sortBy}`);
